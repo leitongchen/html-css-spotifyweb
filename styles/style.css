@@ -1,8 +1,19 @@
 /* ------------------
     COMMON CLASSES
 --------------------- */
-.hidden {
-    display: none;
+body {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.rule {
+    height: 3px;
+
+    background-color: azure;
+    display: inline-block;
 }
 
 /* ------------------
@@ -29,10 +40,6 @@ nav {
     align-items: center;
 }
 
-.tool_bar h5,
-.tool_bar p {
-    margin: 0;
-}
 
 .album_playing > div {
     display: inline-block;   
@@ -45,6 +52,31 @@ nav {
 
 .player {
     flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time_line {
+    width: 100%;
+}
+.time_line span,
+.volume i {
+    vertical-align: sub;
+}
+
+.rule.timing {
+    width: 80%;
+}
+.rule.voluming {
+    width: 100px;
+}
+
+.playing_song_name {
+    font-size: 12px;
+}
+.tool_bar h5 {
+    margin: 0;
 }
 
 /* ------------------
@@ -56,7 +88,7 @@ main {
 
 aside {
     width: 200px;
-    background-color: burlywood;
+    background-color: #1b1e23;
 
     display: flex;
     flex-direction: column;
@@ -64,7 +96,7 @@ aside {
 
 section {
     width: calc(100% - 200px);
-    background-color: coral;
+    background-color: #28333f;
 
     max-height: calc(100vh - 60px);
     overflow: auto;
@@ -75,9 +107,12 @@ section {
     height: calc(100vh - 80px);
 }
 
-aside, 
-section {
+aside {
     padding: 10px;
+}
+
+.upgrade_row {
+    background-color: #080b12;
 }
 
 /* ------------------
@@ -102,16 +137,24 @@ section {
 /* --------------------------
     YOUR SPOTIFY SECTION
 -------------------------- */
+.title_block {
+    padding: 1%;
+}
+
 .covers_container {
     display: flex;
     flex-wrap: wrap;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .cover {
     padding: 1%;
 
     max-width: 200px;
-
     flex-basis: calc(100% / 6);
 }
 
@@ -134,46 +177,6 @@ h3 {
     border: 1px solid rgb(216, 216, 216);
 } 
 
-
-
-/* header {
-    height: 60px;
-    width: 100%;
-    background-color: #282828;
-
-    position: fixed;
-    bottom: 0;
+.hidden {
+    display: none;
 }
-
-aside {
-    width: 200px;
-    height: calc(100vh - 60px);
-    background-color: aquamarine;
-}
-
-section {
-    width: calc(100% - 200px);
-    height: calc(100vh - 60px);
-    background-color: brown;
-
-    overflow: auto;
-    max-height: calc(100vh - 60px);
-}
-
-
-.cover_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
-.covers {
-    height: 200px;
-
-    padding: 8px;
-
-    flex-basis: calc(100% / 5);
-    flex-grow: 1; 
-}*/
-
