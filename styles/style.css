@@ -1,4 +1,155 @@
+/* ------------------
+    COMMON CLASSES
+--------------------- */
+.hidden {
+    display: none;
+}
+
+/* ------------------
+    NAVBAR
+--------------------- */
 header {
+    color: white;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: #282828;
+
+    padding: 10px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.tool_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tool_bar h5,
+.tool_bar p {
+    margin: 0;
+}
+
+.album_playing > div {
+    display: inline-block;   
+    vertical-align: middle;
+}
+
+.tool_bar .cover_img_container {
+    width: 50px;
+}
+
+.player {
+    flex-grow: 1;
+}
+
+/* ------------------
+    MAIN SECTION
+--------------------- */
+main {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    background-color: burlywood;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: calc(100% - 200px);
+    background-color: coral;
+
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+}
+
+aside,
+section {
+    height: calc(100vh - 80px);
+}
+
+aside, 
+section {
+    padding: 10px;
+}
+
+/* ------------------
+    MENU ASIDE
+--------------------- */
+.logo_container {
+    width: 70%;
+}
+
+.menu_icon {
+    width: 20px;
+}
+
+.playlists {
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+
+    flex-grow: 1;
+}
+
+
+/* --------------------------
+    YOUR SPOTIFY SECTION
+-------------------------- */
+.covers_container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+.covers_container_2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+}
+
+
+
+.cover {
+    padding: 7px;
+
+    max-width: 180px;
+
+    flex-basis: calc(100% / 6);
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+}
+
+.cover_img_container img {
+    width: 100%;
+}
+
+/* ------------------
+    UTILITY CLASSES
+--------------------- */
+h3 {
+    background-color: cornflowerblue;
+    border: solid;
+}
+
+.content {
+    background-color: rgb(112, 112, 112);
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(216, 216, 216);
+} 
+
+
+
+/* header {
     height: 60px;
     width: 100%;
     background-color: #282828;
@@ -17,26 +168,25 @@ section {
     width: calc(100% - 200px);
     height: calc(100vh - 60px);
     background-color: brown;
+
+    overflow: auto;
+    max-height: calc(100vh - 60px);
 }
+
 
 .cover_container {
     display: flex;
     flex-wrap: wrap;
-    /* align-content: flex-start; */
+    justify-content: space-evenly;
 }
+
 
 .covers {
     height: 200px;
-    width: calc(100% / 6);
 
     padding: 8px;
 
-    flex-basis: 200px;
-    flex-grow: 1;
-}
+    flex-basis: calc(100% / 5);
+    flex-grow: 1; 
+}*/
 
-.content {
-    background-color: pink;
-    width: 100%;
-    height: 100%;
-}
