@@ -3,6 +3,7 @@
 --------------------- */
 body {
     color: white;
+    line-height: 1;
 }
 
 a {
@@ -11,9 +12,14 @@ a {
 
 .rule {
     height: 3px;
+    border-radius: 3px;
 
     background-color: azure;
     display: inline-block;
+}
+
+.small_text {
+    font-size: 10px;
 }
 
 /* ------------------
@@ -44,6 +50,14 @@ nav {
 .album_playing > div {
     display: inline-block;   
     vertical-align: middle;
+
+    margin-right: 10px;
+}
+.album_playing > .album_name {
+    margin-right: 25px;
+}
+.album_playing .far {
+    margin: 0 4px;
 }
 
 .tool_bar .cover_img_container {
@@ -60,23 +74,45 @@ nav {
 .time_line {
     width: 100%;
 }
-.time_line span,
-.volume i {
-    vertical-align: sub;
+
+/* pulsanti timeline */
+.buttons {
+    font-size: 18px;
+}
+.fa-play-circle {
+    font-size: 30px;
 }
 
-.rule.timing {
-    width: 80%;
-}
-.rule.voluming {
-    width: 100px;
+.buttons .fa, .buttons .far, .buttons .fas,
+.buttons .glyphicon {
+    margin: 0 8px;
 }
 
-.playing_song_name {
+/* icone volume */
+.volume .fas {
+    margin: 0 5px;
     font-size: 12px;
 }
+
+
+/* riga timeline e volume */
+.rule.timing {
+    width: 75%;
+    margin: 0 15px;
+}
+.rule.voluming {
+    width: 80px;
+}
+
+
 .tool_bar h5 {
     margin: 0;
+}
+
+.time_line span,
+.volume i,
+.fa-play-circle {
+    vertical-align: sub;
 }
 
 /* ------------------
@@ -89,6 +125,8 @@ main {
 aside {
     width: 200px;
     background-color: #1b1e23;
+
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -107,9 +145,9 @@ section {
     height: calc(100vh - 80px);
 }
 
-aside {
+/* aside {
     padding: 10px;
-}
+} */
 
 .upgrade_row {
     background-color: #080b12;
@@ -179,4 +217,93 @@ h3 {
 
 .hidden {
     display: none;
+}
+
+
+
+
+/* ---------------------------
+   LG DEVICES MEDIA QUERIES
+---------------------------- */
+@media all and (min-width: 1201px) {
+
+    
+}
+
+/* ---------------------------
+   MD DEVICES MEDIA QUERIES
+---------------------------- */
+@media all and (max-width: 1200px) {
+
+    
+}
+
+
+/* ---------------------------
+   SM DEVICES MEDIA QUERIES
+---------------------------- */
+@media all and (max-width: 991px) {
+
+    /* NAV */
+    .tool_bar .cover_img_container {
+        width: 45px;
+    }
+    .album_playing > .album_name {
+        margin-right: 15px;
+    }
+
+    .album_playing .far {
+        display: block;
+
+        margin: 4px 0;
+    }
+    
+}
+
+/* ---------------------------
+   XS DEVICES MEDIA QUERIES
+---------------------------- */
+@media all and (max-width: 767px) {
+
+    /* NAV */
+    .tool_bar .cover_img_container {
+        width: 30px;
+    }
+    .album_name{
+        max-width: 45px;
+    }
+    .album_playing > div,
+    .album_playing .album_name {
+        margin-right: 3px;
+    }
+
+    .fa-play-circle {
+        font-size: 26px;
+    }
+    .buttons {
+        font-size: 14px;
+    }
+
+    .buttons .fa, .buttons .far, .buttons .fas, 
+    .buttons .glyphicon,
+    .volume .fas  {
+        margin: 0 2px;
+    }
+    .album_playing .far {
+        display: block; /* icone favoriti in verticale */
+        margin: 4px 0;
+    }
+
+    .rule.timing {
+        width: 55%;
+        margin: 0 5px;
+    }
+    .rule.voluming {
+        width: 45px;
+    }
+
+    .tool_bar h5 {
+        font-size: 12px;
+    }
+
 }
