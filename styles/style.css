@@ -22,6 +22,10 @@ a {
     font-size: 10px;
 }
 
+.v_center {
+    vertical-align: middle;
+}
+
 /* ------------------
     NAVBAR
 --------------------- */
@@ -158,10 +162,15 @@ section {
 --------------------- */
 .logo_container {
     width: 70%;
+    margin-bottom: 15px;
 }
 
 .menu_icon {
     width: 20px;
+}
+
+aside ul li {
+    margin: 10px 0;
 }
 
 .playlists {
@@ -171,6 +180,27 @@ section {
     flex-grow: 1;
 }
 
+.profile_info > div {
+    padding: 10px 0;
+}
+.profile_info > div:last-child {
+    padding-bottom: 0;
+}
+
+.profile_icon {
+    display: inline-block;
+    background-color: rgb(150, 150, 150);
+}
+.profile_icon,
+.profile_icon img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.install_container {
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
 
 /* --------------------------
     YOUR SPOTIFY SECTION
@@ -306,4 +336,32 @@ h3 {
         font-size: 12px;
     }
 
+    /* ASIDE MENU */
+    aside {
+        width: 60px;
+        padding: 10px 5px;
+        align-items: center;
+    }
+
+    .logo_container {
+        width: 35px;
+        margin-bottom: 5px;
+    }
+    .menu_icon{
+        width: 25px;
+        margin: 5px 0;
+    }
+
+    .playlists li {
+        display: none;
+    }
+
+    .install_container {
+        border-bottom: 0;
+    }
+
+    /* YOUR SPOTIFY SECTION  */
+    section {
+        width: calc(100% - 60px);
+    }
 }

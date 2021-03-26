@@ -56,23 +56,30 @@
     <main>
         <aside>
             <div class="logo_container">
-                <img class="img-responsive" src="img/logo.svg" alt="logo spotify">
-                <img class="hidden" src="img/logo-small.svg" alt="logo spotify">
+                <img class="hidden-xs img-responsive" src="img/logo.svg" alt="logo spotify">
+                <img class="visible-xs-block" src="img/logo-small.svg" alt="logo spotify">
             </div>
             <ul class="list-unstyled">
                 <li><a href="#">
                     <img class="menu_icon" src="img/home.svg" alt="home icon">
-                    Home
+                    <span class="hidden-xs">Home</span> 
                 </a></li>
                 <li><a href="#">
                     <img class="menu_icon" src="img/search.svg" alt="search icon">
-                    Cerca
+                    <span class="hidden-xs">Cerca</span> 
                 </a></li>
                 <li><a href="#">
                     <img class="menu_icon" src="img/libreria.svg" alt="library icon">
-                    La tua libreria
+                    <span class="hidden-xs">La tua libreria</span>
                 </a></li>
             </ul>
+            <div class="hidden-xs">
+                <h5>Playlist</h5>
+                <a href="#">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Crea Playlist</span>
+                </a>
+            </div>
             <ul class="playlists list-unstyled">
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
@@ -87,10 +94,22 @@
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
                 <li><a href="#">Nome playlist</a></li>
-                
             </ul>
-            <div>
-                Jane Doe
+            <div class="profile_info">
+                <div class="install_container">
+                    <a href="#">
+                        <img class="menu_icon" src="img/download.svg" alt="download icon">
+                        <span class="hidden-xs">Installa App</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="profile_icon v_center">
+                            <img class="img-responsive" src="img/profile.svg" alt="profile icon">
+                        </div>
+                        <span class="hidden-xs">Jane Doe</span>
+                    </a>
+                </div>
             </div>
         </aside>
         <section>
