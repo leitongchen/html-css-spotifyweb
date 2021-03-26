@@ -2,7 +2,7 @@
     COMMON CLASSES
 --------------------- */
 body {
-    color: white;
+    color: #7a7d81;
     line-height: 1;
 }
 
@@ -16,8 +16,12 @@ ul {
 }
 
 a {
-    color: white;
+    color: #7a7d81;
     display: inline-block;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .rule {
@@ -28,14 +32,57 @@ a {
     display: inline-block;
 }
 
-/* FONT SIZES */
+/* COLORS */
+
+.menu_icon {
+    filter: brightness(0.5); /* colore grigio icone img svg */
+}
+aside a:hover .menu_icon {
+    filter: brightness(1);
+}
+
+.text_gray {
+    color: #7a7d81;
+}
+
+h1, h2, h3, h4, h5,
+.text_white {
+    color: white;
+}
+
+/* FONT SIZES and WEIGHT */
 h5 {
     margin: 0;
 }
 .small_text {
     font-size: 10px;
+    font-weight: 500;
 }
 
+/* ASIDE */
+aside li,
+.install_container {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* MAIN */
+.upgrade_row .btn {
+    font-size: 12px;
+}
+
+.evidenza_list {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.covers_container h2 {
+    font-size: 16px;
+}
+
+p small {
+    font-weight: 500;
+}
 
 /* ------------------
     NAVBAR
@@ -53,6 +100,16 @@ nav {
 
     position: fixed;
     bottom: 0;
+}
+
+nav a {
+    color: white;
+}
+nav a.gray_icon {
+    color: #7a7d81;
+}
+nav a.gray_icon:hover {
+    color: white;
 }
 
 .tool_bar {
@@ -88,17 +145,20 @@ nav {
     width: 100%;
 }
 
+/* spazi pulsanti timeline */
+.buttons .fa, .buttons .far, .buttons .fas,
+.buttons .glyphicon {
+    margin: 0 8px;
+}
+
 /* pulsanti timeline */
 .buttons {
+    padding: 5px 0;
+
     font-size: 18px;
 }
 .fa-play-circle {
     font-size: 30px;
-}
-
-.buttons .fa, .buttons .far, .buttons .fas,
-.buttons .glyphicon {
-    margin: 0 8px;
 }
 
 /* icone volume */
@@ -117,15 +177,10 @@ nav {
     width: 80px;
 }
 
-
-.tool_bar h5 {
-    margin: 0;
-}
-
-.time_line span,
-.volume i,
+.time_line span, .rule.timing,
+.volume i, .rule.voluming,
 .fa-play-circle {
-    vertical-align: sub;
+    vertical-align: middle;
 }
 
 /* ------------------
@@ -137,7 +192,7 @@ main {
 
 aside {
     width: 200px;
-    background-color: #1b1e23;
+    background-color: #0d0f13;
 
     padding: 20px;
 
@@ -147,7 +202,7 @@ aside {
 
 section {
     width: calc(100% - 200px);
-    background-color: #28333f;
+    background-color: #17212b;
 
     max-height: calc(100vh - 60px);
     overflow: auto;
@@ -159,14 +214,13 @@ section {
 }
 
 .upgrade_row {
-    background-color: #080b12;
+    background-color: #0f141f;
     padding: 15px 10px;
 }
 .upgrade_row .btn {
     background-color: transparent;
     border: 1px solid;
     border-radius: 16px;
-    font-size: 12px;
     padding: 8px 16px;
 }
 
@@ -213,29 +267,31 @@ aside a {
     border-bottom: 1px solid rgb(150, 150, 150);
 }
 
-aside li,
-.install_container {
-    font-size: 13px;
-}
+
 
 /* --------------------------
     YOUR SPOTIFY SECTION
 -------------------------- */
 .evidenza_list {
     padding: 15px 20px;
-    font-size: 12px;
-    font-weight: 500;
 }
+
+.evidenza_list li {
+    position: relative;
+}
+.evidenza_selected ::before {
+    content : "";
+    position: absolute;
+    left    : 50%;
+    bottom  : 5px;
+    transform: translateX(-50%);
+    height  : 1px;
+    width   : 30%; 
+    border-bottom: 2px solid #adff2f;
+}
+
 .evidenza_list a {
     padding: 15px 10px;
-}
-
-.covers_container h4 {
-    font-size: 16px;
-}
-
-.title_block {
-    padding: 1%;
 }
 
 .covers_container {
@@ -244,10 +300,13 @@ aside li,
 }
 
 .cover {
-    padding: 1%;
-
     max-width: 200px;
     flex-basis: calc(100% / 6);
+}
+
+.title_block,
+.cover {
+    padding: 1%;
 }
 
 .cover_img_container img {
@@ -326,18 +385,20 @@ h3 {
     }
 
     /* YOUR SPOTIFY SECTION */
-
     .cover {
         flex-basis: calc(100% / 2);
     }
-
-
 }
 
 /* ---------------------------
    XS DEVICES MEDIA QUERIES
 ---------------------------- */
 @media all and (max-width: 767px) {
+
+    /* FONT SIZES */
+    .tool_bar h5 {
+        font-size: 12px;
+    }
 
     /* NAV */
     .tool_bar .cover_img_container {
@@ -349,13 +410,6 @@ h3 {
     .album_playing > div,
     .album_playing .album_name {
         margin-right: 3px;
-    }
-
-    .fa-play-circle {
-        font-size: 26px;
-    }
-    .buttons {
-        font-size: 14px;
     }
 
     .buttons .fa, .buttons .far, .buttons .fas, 
@@ -372,8 +426,12 @@ h3 {
         width: 45px;
     }
 
-    .tool_bar h5 {
-        font-size: 12px;
+    /* Pulsanti timeline */
+    .fa-play-circle {
+        font-size: 26px;
+    }
+    .buttons {
+        font-size: 14px;
     }
 
     /* ASIDE MENU */
