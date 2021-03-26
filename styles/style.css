@@ -8,6 +8,8 @@ body {
 
 a {
     color: white;
+    display: inline-block;
+    width: 100%;
 }
 
 .rule {
@@ -53,8 +55,6 @@ nav {
 
 .album_playing > div {
     display: inline-block;   
-    vertical-align: middle;
-
     margin-right: 10px;
 }
 .album_playing > .album_name {
@@ -169,8 +169,11 @@ section {
     width: 20px;
 }
 
-aside ul li {
-    margin: 10px 0;
+aside .logo_container a {
+    padding-top: 0;
+}
+aside a {
+    padding: 10px 0;
 }
 
 .playlists {
@@ -178,13 +181,6 @@ aside ul li {
     overflow: auto;
 
     flex-grow: 1;
-}
-
-.profile_info > div {
-    padding: 10px 0;
-}
-.profile_info > div:last-child {
-    padding-bottom: 0;
 }
 
 .profile_icon {
