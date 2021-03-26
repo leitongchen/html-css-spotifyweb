@@ -6,10 +6,18 @@ body {
     line-height: 1;
 }
 
+.v_center {
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 a {
     color: white;
     display: inline-block;
-    width: 100%;
 }
 
 .rule {
@@ -20,13 +28,14 @@ a {
     display: inline-block;
 }
 
+/* FONT SIZES */
+h5 {
+    margin: 0;
+}
 .small_text {
     font-size: 10px;
 }
 
-.v_center {
-    vertical-align: middle;
-}
 
 /* ------------------
     NAVBAR
@@ -149,20 +158,25 @@ section {
     height: calc(100vh - 80px);
 }
 
-/* aside {
-    padding: 10px;
-} */
-
 .upgrade_row {
     background-color: #080b12;
+    padding: 15px 10px;
 }
+.upgrade_row .btn {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 16px;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
 
 /* ------------------
     MENU ASIDE
 --------------------- */
 .logo_container {
     width: 70%;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .menu_icon {
@@ -173,7 +187,8 @@ aside .logo_container a {
     padding-top: 0;
 }
 aside a {
-    padding: 10px 0;
+    width: 100%;
+    padding: 8px 0;
 }
 
 .playlists {
@@ -198,9 +213,24 @@ aside a {
     border-bottom: 1px solid rgb(150, 150, 150);
 }
 
+aside li,
+.install_container {
+    font-size: 13px;
+}
+
 /* --------------------------
     YOUR SPOTIFY SECTION
 -------------------------- */
+.evidenza_list {
+    padding: 15px 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.evidenza_list a {
+    padding: 15px 10px;
+}
+
+
 .title_block {
     padding: 1%;
 }
@@ -210,10 +240,7 @@ aside a {
     flex-wrap: wrap;
 }
 
-section ul {
-    list-style-type: none;
-    padding: 0;
-}
+
 
 .cover {
     padding: 1%;
@@ -260,7 +287,12 @@ h3 {
    MD DEVICES MEDIA QUERIES
 ---------------------------- */
 @media all and (max-width: 1200px) {
-
+    
+    .cover {
+        padding: 2%;
+        max-width: 300px;
+        flex-basis: calc(100% / 4);
+    }
     
 }
 
@@ -280,10 +312,20 @@ h3 {
 
     .album_playing .far {
         display: block;
-
-        margin: 4px 0;
+        margin: 0;
     }
-    
+
+    .album_playing a {
+        padding: 5px 0;
+    }
+
+    /* YOUR SPOTIFY SECTION */
+    .cover {
+        padding: 2%;
+        max-width: 350px;
+        flex-basis: calc(100% / 2);
+    }
+
 }
 
 /* ---------------------------
@@ -314,10 +356,6 @@ h3 {
     .buttons .glyphicon,
     .volume .fas  {
         margin: 0 2px;
-    }
-    .album_playing .far {
-        display: block; /* icone favoriti in verticale */
-        margin: 4px 0;
     }
 
     .rule.timing {
