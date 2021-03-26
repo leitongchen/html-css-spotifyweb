@@ -230,6 +230,9 @@ aside li,
     padding: 15px 10px;
 }
 
+.covers_container h4 {
+    font-size: 16px;
+}
 
 .title_block {
     padding: 1%;
@@ -240,8 +243,6 @@ aside li,
     flex-wrap: wrap;
 }
 
-
-
 .cover {
     padding: 1%;
 
@@ -251,6 +252,7 @@ aside li,
 
 .cover_img_container img {
     width: 100%;
+    max-height: 300px;
 }
 
 /* ------------------
@@ -287,11 +289,15 @@ h3 {
    MD DEVICES MEDIA QUERIES
 ---------------------------- */
 @media all and (max-width: 1200px) {
-    
+
+    /* YOUR SPOTIFY SECTION */
     .cover {
-        padding: 2%;
         max-width: 300px;
         flex-basis: calc(100% / 4);
+    }
+    .cover,
+    .title_block {
+        padding: 2%;
     }
     
 }
@@ -320,11 +326,11 @@ h3 {
     }
 
     /* YOUR SPOTIFY SECTION */
+
     .cover {
-        padding: 2%;
-        max-width: 350px;
         flex-basis: calc(100% / 2);
     }
+
 
 }
 
