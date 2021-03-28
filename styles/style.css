@@ -24,13 +24,57 @@ a:hover {
     text-decoration: none;
 }
 
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.mr_8 {
+    margin-right: 8px;
+}
+
+/* Riga player e volume */
+
 .rule {
     height: 3px;
-    border-radius: 3px;
-
-    background-color: azure;
+    border-radius: 1.5px;
+}
+.rule_default {
+    background-color: #7a7d81;
+    position: relative;
     display: inline-block;
 }
+
+.rule.rule_20 {
+    position: absolute;
+    top: 0;
+}
+.rule_playing {
+    background-color: #c3c6ca;
+}
+.rule_green {
+    background-color: #adff2f;
+    display: none;
+}
+
+.rule_hover:hover .rule_green {
+    display: block;
+}
+
+.place_holder {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+
+    position: absolute;
+    right: -5px;
+    top: -2.5px;
+}
+
+.rule_20 {
+    width: 20%;
+}
+
 
 /* COLORS */
 
@@ -69,6 +113,9 @@ aside li,
 /* MAIN */
 .upgrade_row .btn {
     font-size: 12px;
+}
+.upgrade_row .btn:hover {
+    color: white;
 }
 
 .evidenza_list {
@@ -110,6 +157,11 @@ nav a.gray_icon {
 }
 nav a.gray_icon:hover {
     color: white;
+}
+
+.album_name:hover .playing_title {
+    color: white;
+    text-decoration: underline;
 }
 
 .tool_bar {
@@ -166,7 +218,6 @@ nav a.gray_icon:hover {
     margin: 0 5px;
     font-size: 12px;
 }
-
 
 /* riga timeline e volume */
 .rule.timing {
@@ -251,6 +302,9 @@ aside a {
 
     flex-grow: 1;
 }
+aside .fa-plus-square {
+    font-size: 24px;
+}
 
 .profile_icon {
     display: inline-block;
@@ -267,6 +321,11 @@ aside a {
     border-bottom: 1px solid rgb(150, 150, 150);
 }
 
+.selected_menu_icon {
+    border-left: 2px solid #adff2f;
+    margin-left: -20px;
+    padding-left: 20px;
+}
 
 
 /* --------------------------
@@ -314,6 +373,43 @@ aside a {
     max-height: 300px;
 }
 
+.cover_img_container {
+    position: relative;
+}
+
+.over_lay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+}
+
+.over_lay.circ_lay {
+    border-radius: 50%;
+}
+
+.over_lay .fa-play-circle {
+    font-size: 56px;
+    color: white;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cover:hover .over_lay {
+    display: block;
+}
+
+.cover a:hover {
+    color: inherit;
+}
+
 /* ------------------
     UTILITY CLASSES
 --------------------- */
@@ -333,17 +429,6 @@ h3 {
     display: none;
 }
 
-
-
-
-/* ---------------------------
-   LG DEVICES MEDIA QUERIES
----------------------------- */
-@media all and (min-width: 1201px) {
-
-    
-}
-
 /* ---------------------------
    MD DEVICES MEDIA QUERIES
 ---------------------------- */
@@ -351,14 +436,13 @@ h3 {
 
     /* YOUR SPOTIFY SECTION */
     .cover {
-        max-width: 300px;
+        max-width: 250px;
         flex-basis: calc(100% / 4);
     }
     .cover,
     .title_block {
         padding: 2%;
-    }
-    
+    }    
 }
 
 
@@ -462,4 +546,12 @@ h3 {
     section {
         width: calc(100% - 60px);
     }
+}
+
+@media all and (max-width: 400px) {
+
+    .album_playing .favourite {
+        display: none;
+    }
+
 }
